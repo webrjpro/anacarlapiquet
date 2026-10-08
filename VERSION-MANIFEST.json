@@ -1,0 +1,227 @@
+{
+  "project": "Entrelinhas — A jornada das palavras",
+  "version": "2.0.0",
+  "deliveryDate": "2026-10-08",
+  "houses": 200,
+  "phases": 40,
+  "developer": "Carlos Antonio de Oliveira Piquet",
+  "designatedRightsHolder": "Ana Carla Saraiva Piquet",
+  "notice": "Inventário de identificação da entrega, sem registro oficial ou assinatura de cessão. Este manifesto não inclui seu próprio hash.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 98,
+      "sha256": "9fb9fd1179a8e2c50d9cfa1eb10db148dfe89a9d70fc53fba81a3432873af167"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 19,
+      "sha256": "c1b97e99a53e076435d68086ee37056c07ba03496769893fc7d8e2f9aad1c6d6"
+    },
+    {
+      "path": "assets/audio/build.mp3",
+      "bytes": 2257,
+      "sha256": "de12c7dd817e980db426f235d539463f3a2984f29919ab380ac4a4c1a347c7fb"
+    },
+    {
+      "path": "assets/audio/click.mp3",
+      "bytes": 1165,
+      "sha256": "d5f66da69d10a914cfefe3d1e8a2a8ce3a772f84471a2e78e99318383cda0068"
+    },
+    {
+      "path": "assets/audio/clue.mp3",
+      "bytes": 2153,
+      "sha256": "d094bb254b63bf5e1f1b8acb0c2b794fcb2a298cb942d80bea5c2d3770ea280a"
+    },
+    {
+      "path": "assets/audio/CREDITS.md",
+      "bytes": 1827,
+      "sha256": "ade2a13c5b867ec2830ef7f019b58d82faa49619d927af72d5c5364033dadabd"
+    },
+    {
+      "path": "assets/audio/crystal.mp3",
+      "bytes": 5481,
+      "sha256": "92f4229c862ac7247ca31e1ff4d5476d41d9219ab698a969871bacae07185345"
+    },
+    {
+      "path": "assets/audio/hint.mp3",
+      "bytes": 1971,
+      "sha256": "ba9c86f47845b38741d4040a9ab7d0d5b01e29005c7d07561385203bd79edb73"
+    },
+    {
+      "path": "assets/audio/impact-sounds-LICENSE.txt",
+      "bytes": 608,
+      "sha256": "b49aa9c56b04528b95913de13e506a0f7c5e807b9925db9bfef86af1f91120db"
+    },
+    {
+      "path": "assets/audio/interface-sounds-LICENSE.txt",
+      "bytes": 574,
+      "sha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+    },
+    {
+      "path": "assets/audio/manifest.json",
+      "bytes": 2434,
+      "sha256": "091f584348555725413473291700ca44b450ac9b8747688455a41e2a77bc6b60"
+    },
+    {
+      "path": "assets/audio/music-jingles-LICENSE.txt",
+      "bytes": 482,
+      "sha256": "373b1c880ee6c7a83c1ccf209f251cf45fc9ea9b1f0330844fa7be64a401adc4"
+    },
+    {
+      "path": "assets/audio/page.mp3",
+      "bytes": 11756,
+      "sha256": "4204eb7ab64a4b45aee37134486b729c568672d5d115dd88fb4699e3f342d52b"
+    },
+    {
+      "path": "assets/audio/peaceful-forest.mp3",
+      "bytes": 888334,
+      "sha256": "37677040d2eae631c92e168b56b04d9e196078ba4f84f06953f9304c777f8d8d"
+    },
+    {
+      "path": "assets/audio/remove.mp3",
+      "bytes": 2465,
+      "sha256": "227d9779fe9adec8b2f28d7d10af6082252dd1e820c82999280371428282c00f"
+    },
+    {
+      "path": "assets/audio/restore.mp3",
+      "bytes": 12312,
+      "sha256": "35e00a8e174a2e11382f282d730ad8b293742b13fd89ba49a06bb77fafbf799d"
+    },
+    {
+      "path": "assets/audio/retry.mp3",
+      "bytes": 2313,
+      "sha256": "d58afa785e6fcaf0d32aca1a6dcdce60baf576e3a145fa9cf7ec2bc6b9ac1712"
+    },
+    {
+      "path": "assets/audio/rpg-audio-LICENSE.txt",
+      "bytes": 478,
+      "sha256": "5735dfd72cb64cbbceda4ebc00c380c41ca680edb82ff153aa7c9ab97614c539"
+    },
+    {
+      "path": "assets/audio/step.mp3",
+      "bytes": 4759,
+      "sha256": "ee132fd0f57637fa75406bb0b16fe122d029c7f5d18f0bcc9dcfd0d90c21cb0c"
+    },
+    {
+      "path": "assets/audio/success.mp3",
+      "bytes": 4915,
+      "sha256": "3c00a96271d455ce17ac1733016ae6005ef926bb021cda18f81fa08ad8504681"
+    },
+    {
+      "path": "assets/audio/sunset-plains.mp3",
+      "bytes": 4771172,
+      "sha256": "794a736708beef4304ef910042955399be4db9e6860276c70e6e904432d0c197"
+    },
+    {
+      "path": "assets/characters/generation-prompts.json",
+      "bytes": 3379,
+      "sha256": "ce9a5eb6e65df6b6060b55c337e6a28fdfce4b24d333b9c5a1de9703a2a4ee06"
+    },
+    {
+      "path": "assets/characters/lia.png",
+      "bytes": 1023529,
+      "sha256": "bdc623a5e1114175125e3f864a1d90ea62513bc072d02928db07df65df415d64"
+    },
+    {
+      "path": "assets/characters/nilo.png",
+      "bytes": 1931601,
+      "sha256": "b5444eb1038f5056385ba125ae87cbf339914597844c5bd58bc587362d8fa387"
+    },
+    {
+      "path": "assets/characters/PROMPTS.md",
+      "bytes": 1228,
+      "sha256": "9dfd1aa7cca7c83874796e66550fc7658a31fca5fe68e01c4a99d9f5acba74db"
+    },
+    {
+      "path": "assets/characters/ravi.png",
+      "bytes": 1006415,
+      "sha256": "1aceb340bd077066260c953962381e22710e346dd89750b35619250b9c644119"
+    },
+    {
+      "path": "css/style.css",
+      "bytes": 35173,
+      "sha256": "21185ed0fdbd4338711721a05c1670ac00bcd45028d4142098a50a6ca7fbab89"
+    },
+    {
+      "path": "DIREITOS_E_CREDITOS.md",
+      "bytes": 2380,
+      "sha256": "d1f2e74d79df64f433c188ab9ccd9bde353875bb0b8747db57fb0296e4c50552"
+    },
+    {
+      "path": "index.html",
+      "bytes": 13933,
+      "sha256": "160d9fb1e2a204335ee3bcd2d761561cba65016decf68afd32665a425732a91f"
+    },
+    {
+      "path": "js/app.js",
+      "bytes": 22983,
+      "sha256": "b9f3dc5d4a63a2193553ba5dabe8618b8143789ea9c63fb60dc797f7c9137248"
+    },
+    {
+      "path": "js/audio.js",
+      "bytes": 2959,
+      "sha256": "af5e37df1964b539c4fc59b3e061e734490341cea088a1b070a481e24755a2a1"
+    },
+    {
+      "path": "js/campaign-extension.js",
+      "bytes": 56357,
+      "sha256": "6c301a78e6954234f5e318a31fe51a1d8f8a72cdb90ab82d653977b5fd6d2735"
+    },
+    {
+      "path": "js/data.js",
+      "bytes": 43064,
+      "sha256": "5df83e1f233e25aba19d734dd9b9f0447c9e264a59fdb270ffa7f15a8234d1b1"
+    },
+    {
+      "path": "js/island-life.js",
+      "bytes": 5529,
+      "sha256": "f178d314e53652a13d330274a2f5ee22c705580d5d25b9f7b0623e0ceda0c980"
+    },
+    {
+      "path": "js/legacy-data.js",
+      "bytes": 19728,
+      "sha256": "797b8c902289317bdc725acb05a9c0786478f70068e2f80d2b74c45ab4b52da2"
+    },
+    {
+      "path": "js/memory-card.js",
+      "bytes": 9668,
+      "sha256": "06778d4456ea7351d4fb37b9895019fe171fb51fc888e80dc401283e13061413"
+    },
+    {
+      "path": "js/storage.js",
+      "bytes": 2940,
+      "sha256": "c3067c0d2c3a9c1d08b57f20e881b6ef03a74141e79c2072754658b6520db4ed"
+    },
+    {
+      "path": "js/world.js",
+      "bytes": 17860,
+      "sha256": "1ffc7bb88040d3e5a599d93d8e5119773c07ae4285363681e0bd0e58a6c2cf12"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 4180,
+      "sha256": "32ceb08d2f11d2ab8196d8166555b9ec97c87eb61342784190953b4494be3f33"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 1211,
+      "sha256": "3c34b6b338c658c70279b735b112379c82a2153cf861de4f66063e002fc53a2c"
+    },
+    {
+      "path": "package.json",
+      "bytes": 520,
+      "sha256": "446bb82b4c6ff4eb64cb1ed97455ff73e7755c9a9e5c831598f7d9d7f6e0b871"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8434,
+      "sha256": "a71410fcd3d93f31c828a78058c34b2a5d629a1d668762949376a9bafba0c1d7"
+    },
+    {
+      "path": "TERMO_DE_CESSAO.md",
+      "bytes": 3642,
+      "sha256": "c964ce12bddbff0a2ccc5b90ffa3c92f7a8bdb90092cdfee4a2ae7dde097cfe8"
+    }
+  ]
+}

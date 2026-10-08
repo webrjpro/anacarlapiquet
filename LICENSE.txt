@@ -1,0 +1,72 @@
+ENTRELINHAS — LICENÇA PROPRIETÁRIA DE USO
+Versão 1.0 — 8 de outubro de 2026
+
+Copyright (c) 2026 Ana Carla Saraiva Piquet.
+Todos os direitos reservados sobre os elementos próprios protegíveis do sistema.
+Desenvolvido por Carlos Antonio de Oliveira Piquet, pai de Ana Carla Saraiva Piquet.
+
+1. TITULARIDADE E OBJETO
+Ana Carla Saraiva Piquet é a titular indicada pelo desenvolvedor para os direitos
+patrimoniais próprios do projeto Entrelinhas — A jornada das palavras, compreendendo
+o código próprio, sua organização e os conteúdos próprios que possam ser protegidos
+pela legislação aplicável. A destinação é de 100% dos direitos que o desenvolvedor
+efetivamente detém sobre esses elementos, conforme instrumento de cessão.
+
+Este aviso de licença não equivale, sozinho, à assinatura de uma cessão de direitos,
+ao registro do software, à prova definitiva de autoria ou à atribuição de direitos
+que pertençam a terceiros. TERMO_DE_CESSAO.md contém uma minuta para formalização.
+
+2. USO PERMITIDO
+Quem receber legitimamente uma cópia pode executá-la para aprendizagem pessoal,
+familiar e acompanhamento pedagógico privado, sem exploração comercial. Pode guardar
+cópias de segurança para esse uso e exportar/importar seus próprios cartões JSON.
+Esta permissão é não exclusiva e não transfere a titularidade do sistema.
+
+3. ATOS QUE DEPENDEM DE AUTORIZAÇÃO
+Salvo permissões legais e licenças próprias de terceiros, dependem de autorização
+prévia, expressa e escrita da titular ou de representante legal habilitado:
+redistribuir publicamente ou vender o sistema; disponibilizá-lo em hospedagem pública;
+licenciar sua exploração comercial; republicar seu código ou conteúdos próprios;
+distribuir versões modificadas ou obras derivadas dos elementos próprios protegidos;
+remover os avisos de titularidade e atribuição; apresentar o projeto próprio como
+obra de outra pessoa. O acesso aos arquivos não implica autorização para esses atos.
+
+4. COMPONENTES DE TERCEIROS E IMAGENS
+Esta licença não altera os direitos ou as permissões das músicas, efeitos, bibliotecas
+e demais componentes de terceiros. Os áudios locais identificados em
+assets/audio/CREDITS.md possuem as licenças ali indicadas, inclusive CC0. Ferramentas
+de desenvolvimento mantêm suas próprias licenças. Imagens geradas com auxílio de IA
+não recebem, por este documento, garantia de exclusividade autoral. Consulte
+DIREITOS_E_CREDITOS.md. Nenhuma restrição desta licença se estende a materiais cuja
+licença própria já permita uso, cópia ou modificação.
+
+5. PERFIS E CARTÕES DE MEMÓRIA
+Nome, foto e anotações enviados pelos usuários não são apropriados por esta licença.
+O jogo atual guarda esses dados localmente. O cartão JSON inclui os dados do perfil
+e pode ser usado para recuperar a aventura. A permissão de backup não autoriza
+divulgar dados pessoais de outras pessoas.
+
+6. LIMITES DA VERSÃO ATUAL
+O projeto é uma versão de aprendizagem fornecida para o uso acima. Não há promessa
+de domínio de leitura, nota escolar, funcionamento em todos os navegadores ou
+recuperação de dados sem um backup disponível. Esta cláusula não afasta direitos
+obrigatórios nem responsabilidades que a legislação não permita excluir.
+
+7. LEGISLAÇÃO E FORMALIZAÇÃO
+Aplicam-se a legislação brasileira pertinente, especialmente as Leis 9.609/1998 e
+9.610/1998, e os limites legalmente previstos. Se a titular for menor de idade,
+atos que exijam representação ou assistência devem observar sua capacidade civil
+e ser praticados por representante legal habilitado. A licença não concede marca
+registrada, patente nem certificado do INPI e não funciona como bloqueio técnico
+contra cópias. A formalização da titularidade deve observar a cessão escrita e
+os requisitos do caso concreto.
+
+DEDICATÓRIA
+Ana Carla Saraiva Piquet:
+Filha, seu pai te ama muito. Que você tenha muito sucesso na vida e que Deus
+te abençoe sempre.
+
+Referências:
+https://www.planalto.gov.br/ccivil_03/leis/l9609.htm
+https://www.planalto.gov.br/ccivil_03/leis/l9610.htm
+https://www.gov.br/inpi/pt-br/assuntos/programas-de-computador

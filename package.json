@@ -1,0 +1,17 @@
+{
+  "name": "entrelinhas-adventure",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Jogo offline de interpretação com 200 casas e 40 fases, dedicado a Ana Carla Saraiva Piquet",
+  "scripts": {
+    "test": "node tests/game.cjs",
+    "preview": "node tests/preview.cjs",
+    "test:menu": "node tests/menu.cjs",
+    "test:memory": "node tests/memory.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.64.0"
+  },
+  "license": "UNLICENSED",
+  "author": "Carlos Antonio de Oliveira Piquet"
+}

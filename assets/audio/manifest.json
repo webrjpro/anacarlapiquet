@@ -1,0 +1,93 @@
+[
+  {
+    "file": "click.mp3",
+    "original": "click_003.ogg",
+    "author": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "clue.mp3",
+    "original": "glass_001.ogg",
+    "author": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "hint.mp3",
+    "original": "drop_003.ogg",
+    "author": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "retry.mp3",
+    "original": "back_001.ogg",
+    "author": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "success.mp3",
+    "original": "confirmation_002.ogg",
+    "author": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "crystal.mp3",
+    "original": "glass_004.ogg",
+    "author": "Kenney",
+    "source": "https://kenney.nl/assets/interface-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "build.mp3",
+    "original": "impactWood_light_000.ogg",
+    "author": "Kenney",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "remove.mp3",
+    "original": "impactWood_medium_001.ogg",
+    "author": "Kenney",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "step.mp3",
+    "original": "footstep_grass_001.ogg",
+    "author": "Kenney",
+    "source": "https://kenney.nl/assets/impact-sounds",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "page.mp3",
+    "original": "bookFlip2.ogg",
+    "author": "Kenney",
+    "source": "https://kenney.nl/assets/rpg-audio",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "restore.mp3",
+    "original": "jingles_PIZZI07.ogg",
+    "author": "Kenney",
+    "source": "https://kenney.nl/assets/music-jingles",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "sunset-plains.mp3",
+    "original": "sunset_plains.wav",
+    "author": "Yoiyami",
+    "source": "https://opengameart.org/content/sunset-plains",
+    "license": "CC0-1.0"
+  },
+  {
+    "file": "peaceful-forest.mp3",
+    "original": "Peaceful Forest.wav",
+    "author": "Samza",
+    "source": "https://opengameart.org/content/peaceful-forest",
+    "license": "CC0-1.0"
+  }
+]

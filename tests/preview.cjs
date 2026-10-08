@@ -1,0 +1,3 @@
+const {chromium}=require('playwright');
+const {pathToFileURL}=require('url');
+(async()=>{const b=await chromium.launch({channel:'msedge',headless:true});const p=await b.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});p.on('pageerror',e=>console.log('PAGE ERROR',e.message));await p.goto(pathToFileURL(require('path').resolve('index.html')).href);await p.waitForTimeout(800);await p.screenshot({path:'tmp/world-desktop.png',fullPage:true});console.log(await p.title());await p.locator('#start-quest').click();await p.screenshot({path:'tmp/mission-desktop.png',fullPage:true});await b.close();})();

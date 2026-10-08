@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#132d2a">
+  <title>Entrelinhas — Um mundo para decifrar</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/data.js"></script><script defer src="js/audio.js"></script><script defer src="js/world.js"></script><script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Entrelinhas, início"><span class="brand-cube">E</span><span>ENTRELINHAS<small>UM MUNDO PARA DECIFRAR</small></span></a>
+    <nav aria-label="Navegação principal"><button class="nav active" data-view="world">◈ <span>Meu mundo</span></button><button class="nav" data-view="journal">▤ <span>Diário de bordo</span></button><button class="nav" data-view="guide">⌘ <span>Como jogar</span></button></nav>
+    <div class="top-actions"><span class="save-indicator" id="save-status">● Salvo neste navegador</span><button class="icon-button" id="sound" aria-label="Ativar som" aria-pressed="false">♪</button><button class="avatar" id="profile" aria-label="Personalizar explorador">N</button></div>
+  </header>
+  <main>
+    <section id="world-view" class="view world-layout">
+      <aside class="sidebar">
+        <div class="eyebrow">SUA EXPEDIÇÃO <span class="live-dot"></span></div>
+        <h1>Uma ilha.<br>Mil descobertas.</h1>
+        <p class="intro">A Névoa apagou os caminhos.<br>As palavras guardam a saída.</p>
+        <div class="chapter-heading"><span>ARQUIPÉLAGO DAS ENTRELINHAS</span><b id="chapter-count">0 / 6</b></div>
+        <div class="chapters" id="chapters"></div>
+        <div class="companion"><img class="companion-portrait" src="assets/characters/nilo.png" alt="Nilo, guardião de madeira com olhos verdes"><div><strong>Nilo, seu companheiro</strong><p id="nilo-text">Primeira pista: um bilhete no acampamento. Vamos ver o que ele esconde?</p></div></div>
+        <button class="text-button" id="progress-button">Ver minhas descobertas <span>↗</span></button>
+      </aside>
+      <div class="play-area">
+        <div class="world-top"><div><span class="eyebrow">MODO EXPLORAÇÃO</span><h2 id="region-title">Bosque dos começos</h2></div><div class="world-weather">☀ <span>Um bom dia para descobrir</span></div></div>
+        <div class="resource-bar" aria-label="Mochila"><span title="Madeira"><i class="resource wood"></i><b id="wood-count">8</b><small>madeira</small></span><span title="Pedra"><i class="resource stone"></i><b id="stone-count">4</b><small>pedra</small></span><span title="Cristais"><i class="resource crystal"></i><b id="crystal-count">0</b><small>cristais</small></span></div>
+        <canvas id="world" tabindex="0" aria-label="Ilha de blocos interativa. Use as setas para mover, Enter para explorar a região selecionada, B para construir e Espaço para colocar um bloco."></canvas>
+        <div class="explorer-label"><span class="live-dot"></span><span id="avatar-name">Explorador</span><small> · sua aventura</small></div>
+        <div class="map-tag"><span class="live-dot"></span> SEU MUNDO ESTÁ CRESCENDO</div>
+        <div class="camera-controls"><button id="zoom-in" aria-label="Aproximar mapa">+</button><button id="zoom-out" aria-label="Afastar mapa">−</button><button id="recenter" aria-label="Centralizar mapa">⌖</button></div>
+        <div class="world-bottom"><div class="world-help" id="world-help"><kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd> mover <span>·</span> clique para explorar</div><button class="build-toggle" id="build-toggle">▧ Construir <kbd>B</kbd></button></div>
+        <div class="build-toolbar" id="build-toolbar" hidden><strong>Sua ilha, suas ideias.</strong><p>Escolha um bloco e clique no chão. Até 4 blocos de altura.</p><div><button data-material="wood" class="selected">▧ Madeira</button><button data-material="stone">▦ Pedra</button><button data-material="crystal">◆ Cristal</button><button data-material="remove">↶ Retirar</button></div><small>Retirar devolve o material. Setas + Espaço também constroem.</small></div>
+        <div class="quest-card"><div class="quest-icon">⚑</div><div class="quest-copy"><span class="eyebrow" id="quest-label">SUA PRÓXIMA DESCOBERTA</span><h3 id="quest-title"></h3><p id="quest-desc"></p></div><button class="primary" id="start-quest">Explorar <span>→</span></button></div>
+      </div>
+    </section>
+    <section id="journal-view" class="view page-view" hidden></section>
+    <section id="guide-view" class="view page-view" hidden>
+      <span class="eyebrow">MANUAL DO EXPLORADOR</span><h1>Seu raciocínio muda o mundo.</h1><p class="page-lead">Cada caminho recuperado começa com uma descoberta no texto.</p>
+      <div class="guide-grid"><article><img class="guide-character" src="assets/characters/nilo.png" alt="Nilo com mapa e lanterna"><b>01 / NILO · EXPLORE</b><h2>Encontre uma história</h2><p>Escolha uma região na lateral ou no mapa. Leia no seu tempo. Aqui não há vidas para perder nem contagem regressiva.</p></article><article><img class="guide-character" src="assets/characters/lia.png" alt="Lia com sua bússola"><b>02 / LIA · INVESTIGUE</b><h2>Mostre como você sabe</h2><p>Escolha uma interpretação e marque os trechos que a sustentam. Nas missões de sequência, organize as ações. Uma resposta precisa de pistas.</p></article><article><img class="guide-character" src="assets/characters/ravi.png" alt="Ravi com sua planta de construção"><b>03 / RAVI · CONSTRUA</b><h2>Deixe sua marca</h2><p>As descobertas dão madeira, pedra e cristais. Ative Construir e coloque blocos no terreno. A cada três missões, uma estrutura da ilha é restaurada.</p></article></div>
+      <article class="guide-note"><h2>Aprender sem fingir resultados</h2><p>As histórias e os personagens são ficcionais, criados para este jogo. Os números do diário vêm apenas das suas jogadas. Completar a aventura não é um certificado de domínio de leitura.</p><p>Praticamos localizar informações, fazer inferências, conectar ideias, interpretar linguagem figurada e comparar fontes. As pistas mostram o raciocínio; depois, você tenta com menos ajuda. Seu diário guarda também as tentativas e as revisões.</p><p>Referência de concepção: <a href="https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit/reading-comprehension-strategies" target="_blank" rel="noopener">EEF — estratégias de compreensão leitora</a>. Essa referência apoia as estratégias; este jogo ainda não foi avaliado com crianças.</p><p>Controles: setas ou WASD para andar; Enter abre a missão; B alterna construção; Espaço coloca um bloco; Esc fecha janelas. No celular, toque no mapa e nos botões.</p><button class="secondary" id="export-save">Baixar meu progresso</button></article>
+    </section>
+  </main>
+  <dialog id="sound-dialog" aria-labelledby="sound-title"><button class="close" id="close-sound" aria-label="Fechar áudio">×</button><span class="eyebrow">PAISAGEM SONORA</span><h2 id="sound-title">O som da sua aventura.</h2><p>Violão suave para explorar, atmosfera de floresta para investigar. A música baixa durante a leitura.</p><label class="sound-row"><span>Música ambiente</span><input type="checkbox" id="music-enabled"></label><label class="sound-slider" for="music-volume">Volume da música<input id="music-volume" type="range" min="0" max="100" step="1"></label><label class="sound-row"><span>Sons das ações</span><input type="checkbox" id="effects-enabled"></label><label class="sound-slider" for="effects-volume">Volume dos efeitos<input id="effects-volume" type="range" min="0" max="100" step="1"></label><small id="now-playing">Som inicia após sua primeira interação.</small><p class="audio-credits">Músicas: <a href="https://opengameart.org/content/sunset-plains" target="_blank" rel="noopener">Sunset Plains · Yoiyami</a> e <a href="https://opengameart.org/content/peaceful-forest" target="_blank" rel="noopener">Peaceful Forest · Samza</a>. Efeitos: <a href="https://kenney.nl/assets" target="_blank" rel="noopener">Kenney</a>. Licenças CC0. Arquivos incluídos no jogo.</p></dialog>
+  <dialog id="mission-dialog" aria-labelledby="mission-title"></dialog>
+  <dialog id="profile-dialog" aria-labelledby="profile-title"><form method="dialog"><button class="close" aria-label="Fechar">×</button><span class="eyebrow">SEU EXPLORADOR</span><h2 id="profile-title">Como quer ser chamado?</h2><label for="player-name">Nome ou apelido</label><input id="player-name" maxlength="24" autocomplete="off" placeholder="Explorador"><p>Seu progresso fica só neste navegador. Não pedimos cadastro.</p><button class="primary" id="save-profile" value="save">Pronto para explorar →</button></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

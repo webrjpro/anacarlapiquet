@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGÊNCIA CÓDICE — Investigação & Interpretação Textual Avançada</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Canvas de Confetes para Triunfos e Promoções -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ========================================================================
+       CABEÇALHO DA AGÊNCIA (HUD PRINCIPAL DO AGENTE)
+       ======================================================================== -->
+  <header class="agency-header">
+    <div class="header-container">
+      
+      <!-- Marca / Logo -->
+      <div class="brand-wrapper" onclick="codice.switchTab('operations')">
+        <div class="brand-logo-icon">📜</div>
+        <div class="brand-titles">
+          <h1>CÓDICE</h1>
+          <span>Agência de Investigação Textual</span>
+        </div>
+      </div>
+
+      <!-- HUD do Agente -->
+      <div class="agent-hud">
+        
+        <!-- Cartão de Perfil Rápido (Clique para editar) -->
+        <div class="hud-agent-card" title="Clique para editar credencial e avatar">
+          <div class="hud-avatar" id="hud-avatar-box"></div>
+          <div class="hud-info">
+            <span class="hud-name" id="hud-agent-name">Sofia</span>
+            <span class="hud-rank-tag" id="hud-agent-rank">🔍 Novata da Agência</span>
+          </div>
+        </div>
+
+        <!-- Barra de XP -->
+        <div class="hud-xp-box">
+          <div class="hud-xp-labels">
+            <span id="hud-xp-val">0 XP</span>
+            <span id="hud-xp-max">350 XP</span>
+          </div>
+          <div class="hud-xp-bar-track">
+            <div class="hud-xp-bar-fill" id="hud-xp-fill"></div>
+          </div>
+        </div>
+
+        <!-- Botões de Controle de Som -->
+        <div class="header-actions">
+          <button class="icon-btn active" id="btn-toggle-sfx" title="Ativar/Desativar Efeitos Sonoros">🔊</button>
+          <button class="icon-btn" id="btn-toggle-bgm" title="Música Ambiente de Foco/Investigação">🎵</button>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       BARRA DE NAVEGAÇÃO POR ABAS
+       ======================================================================== -->
+  <nav class="nav-tabs-wrapper">
+    <div class="nav-tabs-container">
+      <button class="nav-tab-btn active" data-tab="operations">
+        <span>📂</span> Operações & Casos
+      </button>
+      <button class="nav-tab-btn" data-tab="dojo">
+        <span>⚡</span> Dojô de Reflexo Rápido
+      </button>
+      <button class="nav-tab-btn" data-tab="arsenal">
+        <span>🧠</span> Arsenal de Regras de Ouro
+      </button>
+      <button class="nav-tab-btn" data-tab="profile">
+        <span>🎖️</span> Perfil & Distintivos
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       CONTEÚDO PRINCIPAL
+       ======================================================================== -->
+  <main class="main-content">
+
+    <!-- --------------------------------------------------------------------
+         ABA 1: MAPA DE OPERAÇÕES E CASOS
+         -------------------------------------------------------------------- -->
+    <section class="tab-pane active" id="tab-operations">
+      <div class="campaign-hero">
+        <div class="hero-tag">Protocolo de Treinamento Tático</div>
+        <h2>Aprenda a ler o que os outros deixam passar.</h2>
+        <p>Textos não são apenas palavras em uma folha. São labirintos com pistas escondidas, pegadinhas intencionais, fatos camuflados e intenções secretas. Resolva os casos reais da Agência Códice para se tornar uma mestra das entrelinhas.</p>
+      </div>
+
+      <div class="operations-flow" id="operations-flow-container">
+        <!-- Renderizado dinamicamente via app.js -->
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         ABA 2: DOJÔ DE TREINO RÁPIDO (MINIGAMES)
+         -------------------------------------------------------------------- -->
+    <section class="tab-pane" id="tab-dojo">
+      <div class="campaign-hero" style="background: linear-gradient(135deg, rgba(46, 26, 71, 0.7) 0%, rgba(18, 19, 41, 0.8) 100%);">
+        <div class="hero-tag" style="background: rgba(196, 113, 237, 0.15); color: var(--accent-purple); border-color: rgba(196, 113, 237, 0.3);">Treino de Combate Mental</div>
+        <h2>Dojô de Reflexos Textuais</h2>
+        <p>Treine sua agilidade mental com rodadas rápidas e acumule pontos de combo. Identifique manipulações, detecte ironias e descubra o poder das conjunções em frações de segundo!</p>
+      </div>
+
+      <div class="dojo-grid">
+        <!-- Minigame 1 -->
+        <div class="dojo-card">
+          <div>
+            <div class="dojo-icon">⚖️</div>
+            <h3>Fato vs. Opinião Express</h3>
+            <p>Frases rápidas surgem na tela. Seu cérebro precisa julgar imediatamente: é um dado verificável da realidade ou apenas o ponto de vista de quem falou? Acumule combos sem errar!</p>
+          </div>
+          <button class="btn-launch-game" onclick="codice.launchMinigame('factVsOpinion')">
+            <span>Iniciar Desafio Express</span> ▸
+          </button>
+        </div>
+
+        <!-- Minigame 2 -->
+        <div class="dojo-card">
+          <div>
+            <div class="dojo-icon">🌉</div>
+            <h3>O Conectivo Mágico</h3>
+            <p>Uma frase perdeu a palavra que ligava suas duas metades. Escolha a conjunção exata (mas, portanto, embora, porque) que mantém a lógica perfeita sem quebrar o sentido.</p>
+          </div>
+          <button class="btn-launch-game" onclick="codice.launchMinigame('connectives')">
+            <span>Iniciar Caça ao Conectivo</span> ▸
+          </button>
+        </div>
+
+        <!-- Minigame 3 -->
+        <div class="dojo-card">
+          <div>
+            <div class="dojo-icon">🎭</div>
+            <h3>Caçador de Ironia</h3>
+            <p>O personagem falou sério ou foi puro deboche e sarcasmo? Treine seu radar para nunca mais cair em armadilhas de pessoas que falam o oposto do que sentem.</p>
+          </div>
+          <button class="btn-launch-game" onclick="codice.launchMinigame('irony')">
+            <span>Ativar Radar de Ironia</span> ▸
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         ABA 3: ARSENAL DIDÁTICO (GUIA ESTRATÉGICO)
+         -------------------------------------------------------------------- -->
+    <section class="tab-pane" id="tab-arsenal">
+      <div class="campaign-hero" style="background: linear-gradient(135deg, rgba(16, 44, 61, 0.7) 0%, rgba(18, 19, 41, 0.8) 100%);">
+        <div class="hero-tag" style="background: rgba(0, 242, 254, 0.15); color: var(--accent-cyan); border-color: rgba(0, 242, 254, 0.3);">Manual Tático de Campo</div>
+        <h2>O Arsenal Secreto da Leitora Perita</h2>
+        <p>Os segredos que as melhores escolas e bancas de prova não ensinam de forma simples. Consulte sempre que tiver dúvida para entender as táticas que desvendam qualquer texto difícil.</p>
+      </div>
+
+      <div class="arsenal-grid" id="arsenal-cards-container">
+        <!-- Renderizado dinamicamente via app.js -->
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         ABA 4: PERFIL & CONQUISTAS (BADGES)
+         -------------------------------------------------------------------- -->
+    <section class="tab-pane" id="tab-profile">
+      
+      <!-- Card de Visão Geral -->
+      <div class="profile-overview-card">
+        <div class="profile-left">
+          <div class="big-avatar-box" id="profile-big-avatar"></div>
+          <div class="profile-titles">
+            <h2 id="profile-agent-name">Sofia</h2>
+            <span id="profile-agent-codename">Codinome: Olho de Lince</span>
+            <div style="margin-top: 0.6rem;">
+              <button class="tool-btn" id="btn-edit-profile-trigger" style="font-size: 0.75rem; padding: 0.3rem 0.7rem;">✏️ Personalizar Agente</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-stats-row">
+          <div class="stat-item">
+            <span class="stat-val" id="profile-stat-rank">1</span>
+            <span class="stat-label">Patente</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="profile-stat-xp">0</span>
+            <span class="stat-label">XP Acumulado</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="profile-stat-cases">0</span>
+            <span class="stat-label">Casos Resolvidos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Distintivos Colecionáveis -->
+      <div class="badges-section">
+        <h3><span>🎖️</span> Distintivos de Honra ao Mérito</h3>
+        <div class="badges-grid" id="badges-grid-container">
+          <!-- Renderizado dinamicamente via app.js -->
+        </div>
+      </div>
+
+      <!-- Banner de Acesso ao Certificado -->
+      <div class="certificate-promo-banner">
+        <div class="cert-promo-text">
+          <h4>📜 Certificado Oficial de Mérito da Agência Códice</h4>
+          <p>Ao resolver os mistérios e avançar nas operações, emita o seu Certificado de Honra ao Mérito em Decifração Textual assinado pelo Alto Comando, pronto para imprimir e emoldurar!</p>
+        </div>
+        <button class="btn-open-cert" id="btn-open-certificate">
+          <span>Visualizar Certificado Oficial</span>
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       WORKSTATION DO CASO (MODAL DO LEITOR E INVESTIGAÇÃO)
+       ======================================================================== -->
+  <div id="case-reader-modal">
+    <div class="reader-container">
+      
+      <!-- Barra Superior da Workstation -->
+      <div class="reader-top-bar">
+        <div class="reader-title-box">
+          <span id="reader-case-category">Ideia Central vs. Ruído</span>
+          <h3 id="reader-case-title">Caso 101: O Testamento da Mansão Blackwood</h3>
+        </div>
+
+        <div class="reader-tools">
+          <!-- Cores do Marcador -->
+          <button class="tool-btn hl-color-btn" data-color="yellow" title="Grifar em Amarelo">
+            <span style="display:inline-block;width:12px;height:12px;background:#ffd700;border-radius:50%;"></span> Amarelo
+          </button>
+          <button class="tool-btn hl-color-btn" data-color="cyan" title="Grifar em Ciano">
+            <span style="display:inline-block;width:12px;height:12px;background:#00f2fe;border-radius:50%;"></span> Ciano
+          </button>
+          <button class="tool-btn hl-color-btn" data-color="pink" title="Grifar em Rosa">
+            <span style="display:inline-block;width:12px;height:12px;background:#ff76ac;border-radius:50%;"></span> Rosa
+          </button>
+
+          <!-- Ajuste de Fonte -->
+          <button class="tool-btn" id="btn-font-dec" title="Diminuir Fonte">A-</button>
+          <button class="tool-btn" id="btn-font-inc" title="Aumentar Fonte">A+</button>
+
+          <!-- Fechar Leitor -->
+          <button class="tool-btn" id="btn-close-reader" style="background: rgba(255, 71, 87, 0.2); border-color: rgba(255, 71, 87, 0.4); color: var(--accent-red);">
+            ✕ Fechar
+          </button>
+        </div>
+      </div>
+
+      <!-- Split Screen: Dossiê e Perguntas -->
+      <div class="reader-split">
+        
+        <!-- Painel do Texto / Documento de Evidência -->
+        <div class="text-dossier-pane">
+          <div class="dossier-intro">
+            <strong>Contexto da Missão:</strong>
+            <span id="reader-intro-text">O texto a seguir foi recuperado pelos agentes...</span>
+          </div>
+
+          <div class="evidence-document" id="reader-evidence-doc">
+            <!-- Texto inserido dinamicamente -->
+          </div>
+        </div>
+
+        <!-- Painel de Análise Forense e Questões -->
+        <div class="questions-pane">
+          <div>
+            <div class="question-progress">
+              <span id="question-counter-text">Pergunta 1 de 2</span>
+              <button class="hint-toggle-btn" id="btn-toggle-hint">💡 Precisa de Pista?</button>
+            </div>
+
+            <!-- Caixa de Dica Oculta -->
+            <div class="hint-box" id="question-hint-box"></div>
+
+            <div class="question-card">
+              <h4 class="question-title" id="question-title-text">Qual é a Ideia Central do texto?</h4>
+              
+              <!-- Alternativas -->
+              <div class="options-list" id="options-container">
+                <!-- Inseridas dinamicamente -->
+              </div>
+
+              <!-- Feedback Forense Detalhado -->
+              <div class="forensic-feedback" id="forensic-feedback-box">
+                <span class="feedback-badge" id="feedback-badge"></span>
+                <div class="feedback-text" id="feedback-text"></div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-next-question" id="btn-next-question">
+            PRÓXIMA PERGUNTA ▸
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL DE MINIGAME (DOJÔ DE REFLEXO)
+       ======================================================================== -->
+  <div id="minigame-modal">
+    <div class="minigame-container">
+      <div class="minigame-header">
+        <h3 id="minigame-title">Dojô de Treino</h3>
+        <span class="minigame-score-badge" id="minigame-score-text">Pontos: 0</span>
+        <button class="icon-btn" id="btn-close-minigame">✕</button>
+      </div>
+
+      <div class="minigame-body" id="minigame-body-content">
+        <!-- Conteúdo dinâmico do minigame -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL DO CERTIFICADO OFICIAL (IMPRESSÃO & PDF)
+       ======================================================================== -->
+  <div id="certificate-modal">
+    <div class="certificate-paper">
+      
+      <div class="cert-seal">
+        <svg viewBox="0 0 100 100" style="width:100%;height:100%;">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="#b8860b" stroke-width="4" stroke-dasharray="4,2"/>
+          <polygon points="50,15 60,35 85,38 65,55 70,80 50,68 30,80 35,55 15,38 40,35" fill="#f1c40f" opacity="0.85"/>
+          <circle cx="50" cy="50" r="18" fill="#b8860b"/>
+          <text x="50" y="55" font-family="Georgia" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">★ CÓDICE ★</text>
+        </svg>
+      </div>
+
+      <h2>AGÊNCIA CÓDICE DE INTELIGÊNCIA TEXTUAL</h2>
+      <div class="cert-sub">Certificado de Excelência em Investigação & Interpretação de Texto</div>
+
+      <p class="cert-statement">Certificamos solenemente perante o Alto Comando da Agência que a agente investigadora</p>
+      
+      <div class="cert-student-name" id="cert-display-name">Sofia</div>
+
+      <p class="cert-body-desc">
+        completou com distinção honorífica o protocolo tático de leitura analítica, demonstrando maestria comprovada na caça à ideia central, no desmascaramento de falácias e opiniões tendenciosas, na decodificação de ironias e metáforas e na leitura profunda das entrelinhas, alcançando com louvor a patente de <strong id="cert-display-rank">Mestre dos Decifradores</strong>.
+      </p>
+
+      <div class="cert-signatures">
+        <div class="cert-sig-block">
+          <div class="sig-line"></div>
+          <span class="sig-name">Inspetor-Geral Vance</span>
+          <span class="sig-title">Comando de Análise Forense Textual</span>
+        </div>
+        <div class="cert-sig-block">
+          <div class="sig-line"></div>
+          <span class="sig-name" id="cert-display-date">8 de Outubro de 2026</span>
+          <span class="sig-title">Data de Homologação</span>
+        </div>
+      </div>
+
+      <div class="cert-print-actions">
+        <button class="btn-print" id="btn-print-certificate">🖨️ Imprimir / Salvar em PDF</button>
+        <button class="btn-close-cert" id="btn-close-certificate">Fechar Visualização</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL DE EDIÇÃO DE CREDENCIAL DA AGENTE
+       ======================================================================== -->
+  <div id="agent-editor-modal" class="modal-backdrop">
+    <div class="minigame-container" style="max-width: 520px;">
+      <div class="minigame-header">
+        <h3>Identificação da Agente</h3>
+        <button class="icon-btn" id="btn-close-editor">✕</button>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 1.2rem; padding: 1rem 0;">
+        <div>
+          <label style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.4rem;">Nome da Investigadora:</label>
+          <input type="text" id="input-agent-name" value="Sofia" style="width: 100%; padding: 0.75rem 1rem; background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); color: #fff; border-radius: var(--radius-sm); font-size: 1rem;">
+        </div>
+        <div>
+          <label style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.4rem;">Codinome Especial:</label>
+          <input type="text" id="input-agent-codename" value="Olho de Lince" style="width: 100%; padding: 0.75rem 1rem; background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); color: #fff; border-radius: var(--radius-sm); font-size: 1rem;">
+        </div>
+        <div>
+          <label style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 0.6rem;">Escolha o Avatar:</label>
+          <div style="display: flex; gap: 0.8rem; justify-content: center;" id="avatar-choices-row"></div>
+        </div>
+        <button class="btn-launch-game" id="btn-save-agent" style="margin-top: 0.5rem;">Salvar Credencial</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/audio.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

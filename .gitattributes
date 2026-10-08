@@ -1,0 +1,2 @@
+# Preserve os bytes dos arquivos para conferir o inventário SHA-256 em qualquer sistema.
+* -text
